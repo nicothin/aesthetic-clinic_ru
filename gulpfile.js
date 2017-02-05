@@ -25,7 +25,7 @@ const cleanCSS = require('gulp-cleancss');
 
 // ЗАДАЧА: Компиляция препроцессора
 gulp.task('less', function(){
-  return gulp.src(dirs.source + '/less/style.less')         // какой файл компилировать (путь из константы)
+  return gulp.src(dirs.source + '/less/*.less')         // какой файл компилировать (путь из константы)
     .pipe(plumber({ errorHandler: onError }))
     .pipe(sourcemaps.init())                                // инициируем карту кода
     .pipe(less())                                           // компилируем LESS
@@ -35,10 +35,7 @@ gulp.task('less', function(){
     ]))
     .pipe(sourcemaps.write('/'))                            // записываем карту кода как отдельный файл (путь из константы)
     .pipe(gulp.dest(dirs.build + '/css/'))                  // записываем CSS-файл (путь из константы)
-    .pipe(browserSync.stream())
-    .pipe(rename('style.min.css'))                          // переименовываем
-    .pipe(cleanCSS())                                       // сжимаем
-    .pipe(gulp.dest(dirs.build + '/css/'));                 // записываем CSS-файл (путь из константы)
+    .pipe(browserSync.stream());
 });
 
 // ЗАДАЧА: Сборка HTML
@@ -100,7 +97,7 @@ gulp.task('serve', gulp.series('build', function() {
   );
 
   gulp.watch(                                               // следим за LESS
-    dirs.source + '/less/**/*.less',
+    dirs.source + '/less/**/*.{less,css}',
     gulp.series('less')                                     // при изменении запускаем компиляцию (обновление браузера — в задаче компиляции)
   );
 
