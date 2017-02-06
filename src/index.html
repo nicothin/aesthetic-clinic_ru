@@ -1,14 +1,20 @@
 
 <!DOCTYPE HTML>
-<html><head>
+<!-- добавил класс no-js -->
+<html class="no-js"><head>
 	<meta charset="UTF-8">
+  <!-- добавил вьюпорт -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Пластика лица в спб. Подтяжка лица (фейслифтинг). Липофилинг. Эстетическая блефаропластика. Ринопластика в спб. Отопластика в спб. Клиника  на Комсомола</title>
+  <script>
+  // Маркер работающего javascript
+  document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+  </script>
+	<title>Клиника эстетической хирургии и косметологии. Пластическая хирургия в Санкт-Петербурге. Пластические операции по увеличениию груди. Пластика живота. Липосакция. Подтяжка лица. Косметические операции. Ринопластика (пластика носа). Маммопластика (увеличение груди).</title>
 	<meta name="generator" content="MaxSite CMS">
-	<meta name="description" content="Пластика лица - раздел эстетической хирургии в клинике эстетической хирургии и косметологии, в котором выполняются операции на лице (подтяжка лица, лба) и помогающий устранить дефекты верхних и нижних век, носа, ушных раковин">
-	<meta name="keywords" content="Пластика лица в спб, подтяжка лица в спб,  липофилиг, блефаропластика, ринопластика в спб, отопластика в спб">
+	<meta name="description" content="Клиника эстетической хирургии и косметологии - услуги в области пластической хирургии. Увеличение груди, пластика живота и ягодиц, подтяжка лица, ринопластика, отопластика, косметические операции. ринопластика (пластика носа), маммопластика (увеличение груди), косметология">
+	<meta name="keywords" content="эстетическая, хирургия, косметическая, операция, пластическая, липосакция, увеличение, груди, подтяжка, лица, ринопластика, отопластика">
 	<link rel="shortcut icon" href="http://aesthetic-clinic.ru/application/maxsite/templates/max-elevation/images/favicons/favicon.ico" type="image/x-icon">
-	<link rel="canonical" href="http://aesthetic-clinic.ru/page/face">
+	<link rel="canonical" href="http://aesthetic-clinic.ru/">
 	<!-- RSS -->
 	<link rel="alternate" type="application/rss+xml" title="Все новые записи" href="http://aesthetic-clinic.ru/feed">
 <link rel="alternate" type="application/rss+xml" title="Все новые комментарии" href="http://aesthetic-clinic.ru/comments/feed">
@@ -20,11 +26,24 @@
 	<link rel="stylesheet" href="http://aesthetic-clinic.ru/application/maxsite/templates/max-elevation/css/print.css" media="print">
 	<script src="http://aesthetic-clinic.ru/application/maxsite/common/jquery/jquery.min.js"></script>
 
+  <script>
+
+  // меню услуг
+  $( document ).ready(function() {
+    $('#MainMenu .wrap').before('<span id="main-menu-title" class="main-menu-title"><span class="main-menu-title__icon"></span> Услуги</span>');
+    $('#main-menu-title').on('click', function(){
+      $('#MainMenu .wrap').slideToggle();
+      $(this).find('.main-menu-title__icon').toggleClass('main-menu-title__icon--close');
+    });
+  });
+
+  </script>
+
 	<!-- plugins -->
 
 	<!-- /plugins -->
 
-</head><body class="body-all body-page">
+</head><body class="body-home">
 <!-- end header -->
 
 <div class="all">
@@ -93,9 +112,9 @@
 <div id="MainMenu" class="MainMenu"><div class="wrap">
 	<ul class="menu">
 
-		<li class="group first group-num-1 group-selected"><a href="#"><span>Хирургия</span></a>
+		<li class="group first group-num-1 group-default"><a href="#"><span>Хирургия</span></a>
 <ul>
-<li class="selected group-first"><a href="http://aesthetic-clinic.ru/page/face"><span>Пластика лица</span></a></li>
+<li class="group-first"><a href="http://aesthetic-clinic.ru/page/face"><span>Пластика лица</span></a></li>
 <li><a href="http://aesthetic-clinic.ru/page/breast"><span>Пластика груди</span></a></li>
 <li><a href="http://aesthetic-clinic.ru/page/legs"><span>Пластика ног</span></a></li>
 <li><a href="http://aesthetic-clinic.ru/page/gljuteoplastika-plastika-jagodic-v-sankt-peterburge-spb"><span>Пластика ягодиц</span></a></li>
@@ -135,6 +154,123 @@
 	</ul>
 	<div class="clearfix"></div>
 </div><!-- div class=wrap --></div><!-- div id="MainMenu" -->
+<script src="http://aesthetic-clinic.ru/application/maxsite/templates/max-elevation/stock/iosslider/jquery.iosslider.min.js"></script>
+
+<script>
+	$(document).ready(function() {
+			$("div.iosSlider").iosSlider({
+				snapToChildren: true,
+				desktopClickDrag: true,
+				infiniteSlider: true,
+				autoSlide: true,
+				autoSlideTimer: 4000,
+				onSlideStart: slideContentStart, // начало смены слайда
+				onSlideComplete: slideContentComplete, // смена готова
+			});
+
+			function slideContentStart(args)
+			{
+				$(args.sliderObject).find("div.r2, div.r3").animate(
+					{
+						opacity: "hide",
+					}, 500);
+			}
+
+			function slideContentComplete(args)
+			{
+				$(args.sliderObject).find("div.r2").animate(
+					{
+						opacity: "show",
+					}, 500);
+
+				$(args.sliderObject).find("div.r3").animate(
+					{
+						height: "show"
+					}, 800);
+			}
+	});
+</script>
+
+<div class="iosSlider">
+	<div class="iosSlider_container">
+				<div class="slide"><div class="slide-wrap">
+				<div class="r1">
+					<img src="http://aesthetic-clinic.ru/uploads/boobs2.jpg" alt="">
+				</div>
+
+
+				<div class="r2"></div>
+
+				<div class="r3"><div class="wrap">
+					<h3><a href="http://aesthetic-clinic.ru/page/akcija-dostupnoe-uvelichenie-grudi">Узнать больше ></a></h3>
+					<p>Акция: Доступная пластика груди!</p>
+				</div></div>
+
+
+			</div></div>
+				<div class="slide"><div class="slide-wrap">
+				<div class="r1">
+					<img src="http://aesthetic-clinic.ru/uploads/uho.jpg" alt="">
+				</div>
+
+
+				<div class="r2"></div>
+
+				<div class="r3"><div class="wrap">
+					<h3><a href="http://aesthetic-clinic.ru/page/akcija-dostupnaja-plastika-ushej">Узнать больше > </a></h3>
+					<p>Акция: Доступная пластика ушей!</p>
+				</div></div>
+
+
+			</div></div>
+				<div class="slide"><div class="slide-wrap">
+				<div class="r1">
+					<img src="http://aesthetic-clinic.ru/uploads/intim-plastic.jpg" alt="">
+				</div>
+
+
+				<div class="r2"></div>
+
+				<div class="r3"><div class="wrap">
+					<h3><a href="http://aesthetic-clinic.ru/page/akcija-dostupnaja-intimnaja-plastika-v-sankt-peterburge-spb">Узнать больше ></a></h3>
+					<p>Акция: Скидки на интимную пластику!</p>
+				</div></div>
+
+
+			</div></div>
+				<div class="slide"><div class="slide-wrap">
+				<div class="r1">
+					<img src="http://aesthetic-clinic.ru/uploads/kosmetology.jpg" alt="">
+				</div>
+
+
+				<div class="r2"></div>
+
+				<div class="r3"><div class="wrap">
+					<h3><a href="http://aesthetic-clinic.ru/page/skidki-na-kosmetologiyu">Узнать больше ></a></h3>
+					<p>Акция: Скидки на косметологию!</p>
+				</div></div>
+
+
+			</div></div>
+				<div class="slide"><div class="slide-wrap">
+				<div class="r1">
+					<img src="http://aesthetic-clinic.ru/uploads/complex.jpg" alt="">
+				</div>
+
+
+				<div class="r2"></div>
+
+				<div class="r3"><div class="wrap">
+					<h3><a href="http://aesthetic-clinic.ru/page/ginekologija-v-sankt-peterburge-spb">Узнать больше ></a></h3>
+					<p>Акция: Скидки на гинекологию!</p>
+				</div></div>
+
+
+			</div></div>
+
+	</div>
+</div>
 				</div><!-- div class="header-wrap" -->
 			</div><!-- div class="header" -->
 
@@ -145,79 +281,86 @@
 					<div class="content">
 						<div class="content-wrap">
 
-<div class="type type_page">
+<div class="wrap">
+<div class="page_content type_home"><p>Красота и&nbsp;здоровье ценились человечеством во&nbsp;все времена. Стремление выглядеть молодым и&nbsp;привлекательным вполне естественно для&nbsp;любого человека, особенно для&nbsp;женщины. Но, чтобы выглядеть красивой, вовсе необязательно иметь идеальные черты лица. Стройная фигура, грациозная осанка, пышные блестящие волосы — вот черты истинной красавицы.</p>
 
-<div class="page_only"><div class="wrap">
-<h1>Пластика лица</h1><div class="info info-top"><div style="margin: 10px 0; padding: 5px 3px; line-height: 1.8em;"></div></div><div class="page_content type_page"><p><h1>Эстетические операции на лице:</h1></p>
-
-<h3><A href="http://aesthetic-clinic.ru/page/face-lifting">Подтяжка лица (фейс-лифтинг)</A></h3>
+<p><img src="http://aesthetic-clinic.ru/uploads/hall.jpg" alt="Клиника эстетической хирургии и косметологии" class="main1" align="left" />Вряд&nbsp;ли кто будет спорить, что красота каждой женщины неповторима и&nbsp;не стоит в&nbsp;угоду модным течениям уничтожать те очарование и&nbsp;шарм, которые заложены природой в&nbsp;каждой из&nbsp;них.</p>
 
 
-<P>Операция <strong>подтяжки кожи лица</strong>, позволяет добиться качественного и&nbsp;долговременного результата, восстановить овал лица, <strong>разгладить морщины</strong>, вернуть лицу свежесть.</P>
+<p>Ну, а&nbsp;если все&nbsp;же есть некие досадные дефекты фигуры, которые не&nbsp;позволяют женщине ощущать себя красивой и&nbsp;свободной, то их поможет устранить <strong>эстетическая хирургия </strong>— хирургия счастья и&nbsp;красоты.</p>
 
-<h3><A href="http://aesthetic-clinic.ru/page/lipofiling">Липофилинг</A></h3>
+<p >«<strong>Клиника эстетической хирургии и&nbsp;косметологии</strong>» сегодня — это новый стандарт <strong>эстетической медицины</strong>, основанный на&nbsp;отечественных традициях врачебного мастерства и&nbsp;базирующийся на&nbsp;лучших мировых достижениях в&nbsp;этой области. Основа идеологии всех сотрудников клиники - предоставление пациентам медицинских услуг самого высокого качества в&nbsp;наиболее удобной форме. </p>
 
-
-<P><strong>Липофилинг</strong>&nbsp;— один из&nbsp;методов коррекции объемных дефектов мягких тканей, в&nbsp;том числе возрастных изменений. Его отличают малая травматичность, короткий восстановительный период, низкий процент осложнений, достаточно высокая эффективность.</P>
-
-<h3><A href="http://aesthetic-clinic.ru/page/blefaro">Эстетическая блефаропластика</A></h3>
+<p>В&nbsp;нашей клинике работают высокопрофессиональные <a href="http://aesthetic-clinic.ru/page/specialists">специалисты</a> в&nbsp;области эстетической медицины — кандидаты и&nbsp;доктора наук, многие годы посвятившие хирургии молодости и&nbsp;красоты. В&nbsp;их арсенале высокоэффективные оригинальные проверенные временем технологии.</p>
 
 
-<P><strong>Эстетическая блефаропластика</strong>&nbsp;— операция, целью которой является устранение избытков кожи на&nbsp;верхних и&nbsp;нижних веках. Выполняется при наличии расслабленности и&nbsp;растянутости кожи, а&nbsp;также для удаления выбухающего окологлазничного жира на&nbsp;отдельных участках век (жировые грыжи). Также блефаропластика применяется для визуального увеличения глаз и коррекции "восточных" век.</P>
+<p><strong>Клинику эстетической хирургии и&nbsp;косметологии</strong> отличают высокое качество исполнения операций и&nbsp;доступные <a href="http://aesthetic-clinic.ru/page/price">цены</a>.</p>
 
-<h3><A href="http://aesthetic-clinic.ru/page/rino">Ринопластика</A></h3>
+<p>В разделе <a href="http://aesthetic-clinic.ru/page/pochemu-my" title="Почему мы" rel="">Почему мы?</a> можно ознакомиться с причинами, по которым Вы можете доверить заботу о своём здоровье и красоте именно специалистам нашей Клиники.</p>
+
+<h3>Наиболее распространенными пластическими операциями являются:</h3>
 
 
-<P><strong>Ринопластика</strong>&nbsp;— операция, целью которой является устранение <strong>эстетических недостатков носа</strong>, с&nbsp;восстановлением при необходимости функции дыхания. Выполняется при неудовлетворенности пациентом формой и&nbsp;размером носа.</P>
+<p><strong>Пластика груди — <a href="http://aesthetic-clinic.ru/page/augmentation" title="Увеличение груди" rel="">Увеличение груди</a></strong> (увеличивающая маммопластика, эндопротезирование молочных желез), <a href="http://aesthetic-clinic.ru/page/lifting" title="Мастопексия, подтяжка груди" rel="">подтяжка груди</a> или мастопексия (пластика груди, направленная на восстановление нормальной высоты груди и улучшение её формы), <a href="http://aesthetic-clinic.ru/page/reduction" title="уменьшение груди, маммопластика" rel="">редукционная маммопластика</a> (уменьшение размеров и улучшение формы молочных желез).</p>
 
-<h3><A href="http://aesthetic-clinic.ru/page/oto">Отопластика</A></h3>
 
-<P><strong>Отопластика</strong>&nbsp;— операция на&nbsp;ушных раковинах, целью которой является устранение <strong>недостатков ушных раковин</strong> или восстановление при отсутствии ушной раковины или её&nbsp;части.</P>
+<p><strong>Пластика лица — <a href="http://aesthetic-clinic.ru/page/face-lifting" title="Подтяжка лица" rel="">подтяжка лица</a></strong> (фейс-лифтинг), <strong><a href="http://aesthetic-clinic.ru/page/lipofiling" title="Липофилинг" rel="">липофилинг</a></strong> (метод коррекции объемных дефектов мягких тканей), эстетическая <strong><a href="http://aesthetic-clinic.ru/page/blefaro" title="Блефаропластика" rel="">блефаропластика</a> </strong>(устранение "мешков" над- и под глазами, а также избытков кожи на верхних и нижних веках), <strong><a href="http://aesthetic-clinic.ru/page/rino" title="Ринопластика" rel="">ринопластика</a></strong> (устранение эстетических недостатков носа), <strong><a href="http://aesthetic-clinic.ru/page/oto" title="Отопластика" rel="">отопластика</a></strong> (устранение недостатков ушных раковин, изменение формы ушей).</p>
 
-<h3><A href="http://aesthetic-clinic.ru/page/udalenie-komkov-bisha-v-sankt-peterburge-spb">Удаление комков Биша</A></h3>
 
-<P><strong>Удаление комков Биша</strong>&nbsp;— операция, целью которой является устранение <strong>избыточного объёма щёк</strong>, а также излишней "тяжести" нижней части лица.</P>
+<p><strong><a href="http://aesthetic-clinic.ru/page/liposuction" title="Липосакция" rel="">Липосакция</a> </strong> — избавление от избыточных жировых отложений.</p>
 
-<h3><A href="http://aesthetic-clinic.ru/page/hejloplastika-uluchshenie-formy-gub-uvelichenie-obema-verhnej-i-nizhnej-guby-v-sankt-peterburge-spb">Хейлопластика</A></h3>
 
-<P><strong>Хейлопластика</strong>&nbsp;— операция, целью которой является увеличение объёма и/или улучшение формы губ.</P>
+<p><strong><a href="http://aesthetic-clinic.ru/page/buttock" title="Пластика ягодиц" rel="">Пластика ягодиц</a></strong> — хирургическая операция, направленная на улучшение формы и увеличение объёма ягодиц.</p>
 
-<p><h1><a name="rekonstrukciya-lica"></a>Реконструктивные операции на лице.</h1></p>
 
-<p><a href="http://aesthetic-clinic.ru/page/specialists">Специалисты</a> Клиники эстетической хирургии и косметологии имеют колоссальный многолетний опыт восстановления лица и его частей после травм, врождённых деформаций, пороков развития, удаления новообразований, а также коррекции остаточных деформаций после неудачных пластических операций.</p>
+<p><strong><a href="http://aesthetic-clinic.ru/page/abdomino" title="Пластика живота, абдоминопластика" rel="">Пластика живота</a></strong> (абдоминопластика)  — хирургический способ коррекции фигуры, восстанавливающий упругость живота.</p>
 
-<p>К челюстно-лицевым хирургам нашей Клиники обращаются пациенты как из Российской Федерации, так и из ближнего и дальнего зарубежья.</p>
 
-<p>Наиболее востребованными являются следующие виды реконструктивных операций на лице:</p>
+<p><strong><a href="http://aesthetic-clinic.ru/page/legs" title="Пластика ног, контурная пластика голеней" rel="">Пластика ног</a> </strong> (контурная пластика голеней) — хирургическая операция, направленная на увеличение объема и улучшение формы голеней.</p>
 
-<h3><A href="http://aesthetic-clinic.ru/page/vosstanovlenie-rekonstrukcija-formy-nosa-posle-travm-pereloma-rinoplastiki-operacii-v-sankt-peterburge-spb">Реконструктивная ринопластика (восстановление формы носа)</A></h3>
 
-<P><strong>Исправить (восстановить) форму носа</strong> после травм, перелома, оперативных вмешательств (а в некоторых случаях и создать его заново) призваны реконструктивные операции на носу (реконструктивная ринопластика).</P>
+<p>Несмотря на&nbsp;большой прогресс <strong>эстетической хирургии</strong>, следует помнить, что сама по&nbsp;себе <strong>косметическая операция </strong>не&nbsp;может сделать человека счастливым, она не&nbsp;в&nbsp;состоянии превратить Вас в&nbsp;Ваш идеал или&nbsp;заставить людей относиться к&nbsp;Вам иначе. Операция способна улучшить Ваш внешний вид и&nbsp;укрепить чувство собственного достоинства. Прежде, чем Вы решитесь на&nbsp;<strong>косметическую операцию</strong>, еще раз оцените реальность Ваших ожиданий и&nbsp;обсудите их с&nbsp;хирургом. Только тогда Вы в&nbsp;полной мере сможете насладиться теми плодами, которые может дать <strong>эстетическая хирургия</strong>.</p>
 
-<h3><A href="http://aesthetic-clinic.ru/page/vosstanovlenie-rekonstrukcija-formy-ushnoj-rakoviny-uha-posle-travm-vrozhdjonnyh-anomalij-operacii-v-sankt-peterburge-spb">Реконструктивная отопластика (восстановление формы уха)</A></h3>
 
-<P><strong>Исправить (восстановить) форму уха</strong> после травм, врождённых деформаций, оперативных вмешательств (а в некоторых случаях и создать его заново) призваны реконструктивные операции на ушных раковинах (реконструктивная отопластика).</P>
+<h3><strong>Задать вопрос врачу Вы можете</span> <a href="#TB_inline?height=400&width=450&inlineId=contactform" class="thickbox">здесь</a> или по телефону: (812) 927-98-27</strong>.</h3>
 
-<h3><A href="http://aesthetic-clinic.ru/page/hejloplastika-vosstanovlenie-rekonstrukcija-formy-gub-posle-travm-vrozhdjonnyh-deformacij-operacii-v-sankt-peterburge-spb">Реконструктивная хейлопластика (восстановление формы губ)</A></h3>
+<p>Наши <a href="http://aesthetic-clinic.ru/page/contacts">контакты</a></p>
 
-<P><strong>Исправить (восстановить) форму губ</strong> после травм, врождённых деформаций, оперативных вмешательств призваны реконструктивные операции на губах (реконструктивная хейлопластика).</P>
 
-<h3><A href="http://aesthetic-clinic.ru/page/rekonstruktivnaja-plastika-okoloorbitalnoj-oblasti-blefaroplastika-vosstanovlenie-rekonstrukcija-formy-vek-posle-travm-vrozhdjonnyh-deformacij-operacii-v-sankt-peterburge-spb">Реконструктивная пластика околоорбитальной области (восстановление формы век)</A></h3>
+<div id="contactform"  style="display:none">
 
-<P><strong>Исправить (восстановить) форму век</strong> после травм, врождённых деформаций, оперативных вмешательств призваны реконструктивные операции в околоорбитальной области (реконструктивная блефаропластика).</P>
-<div class="addzakl">Добавить в закладки: <a rel="nofollow" href="http://twitter.com/home/?status=%D0%9F%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BA%D0%B0+%D0%BB%D0%B8%D1%86%D0%B0+http%3A%2F%2Faesthetic-clinic.ru%2Fpage%2Fface"><img title="Добавить в Twitter" alt="twitter.com" src="http://aesthetic-clinic.ru/application/maxsite/plugins/addzakl/images24/twitter.png" width="24" height="24"></a> <a rel="nofollow" href="http://www.facebook.com/sharer.php?u=http://aesthetic-clinic.ru/page/face"><img title="Поделиться в Facebook" alt="facebook.com" src="http://aesthetic-clinic.ru/application/maxsite/plugins/addzakl/images24/facebook.png" width="24" height="24"></a> <a rel="nofollow" href="http://vkontakte.ru/share.php?url=http://aesthetic-clinic.ru/page/face&amp;title=%D0%9F%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BA%D0%B0+%D0%BB%D0%B8%D1%86%D0%B0+-+%D0%9A%D0%BB%D0%B8%D0%BD%D0%B8%D0%BA%D0%B0+%D1%8D%D1%81%D1%82%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B9+%D1%85%D0%B8%D1%80%D1%83%D1%80%D0%B3%D0%B8%D0%B8+%D0%B8+%D0%BA%D0%BE%D1%81%D0%BC%D0%B5%D1%82%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8"><img title="Поделиться В Контакте" alt="vkontakte.ru" src="http://aesthetic-clinic.ru/application/maxsite/plugins/addzakl/images24/vkontakte.png" width="24" height="24"></a> <a rel="nofollow" href="http://www.odnoklassniki.ru/dk?st.cmd=addShare&amp;st._surl=http://aesthetic-clinic.ru/page/face&amp;title=%D0%9F%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BA%D0%B0+%D0%BB%D0%B8%D1%86%D0%B0+-+%D0%9A%D0%BB%D0%B8%D0%BD%D0%B8%D0%BA%D0%B0+%D1%8D%D1%81%D1%82%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B9+%D1%85%D0%B8%D1%80%D1%83%D1%80%D0%B3%D0%B8%D0%B8+%D0%B8+%D0%BA%D0%BE%D1%81%D0%BC%D0%B5%D1%82%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8"><img title="Добавить в Одноклассники" alt="odnoklassniki.ru" src="http://aesthetic-clinic.ru/application/maxsite/plugins/addzakl/images24/odnoklassniki.png" width="24" height="24"></a> <a rel="nofollow" href="http://connect.mail.ru/share?url=http://aesthetic-clinic.ru/page/face&amp;title=%D0%9F%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BA%D0%B0+%D0%BB%D0%B8%D1%86%D0%B0+-+%D0%9A%D0%BB%D0%B8%D0%BD%D0%B8%D0%BA%D0%B0+%D1%8D%D1%81%D1%82%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B9+%D1%85%D0%B8%D1%80%D1%83%D1%80%D0%B3%D0%B8%D0%B8+%D0%B8+%D0%BA%D0%BE%D1%81%D0%BC%D0%B5%D1%82%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8"><img title="Поделиться в Моем Мире@Mail.Ru" alt="mail.ru" src="http://aesthetic-clinic.ru/application/maxsite/plugins/addzakl/images24/mail-ru.png" width="24" height="24"></a> <a rel="nofollow" href="http://my.ya.ru/posts_add_link.xml?URL=http://aesthetic-clinic.ru/page/face&amp;title=%D0%9F%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BA%D0%B0+%D0%BB%D0%B8%D1%86%D0%B0+-+%D0%9A%D0%BB%D0%B8%D0%BD%D0%B8%D0%BA%D0%B0+%D1%8D%D1%81%D1%82%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B9+%D1%85%D0%B8%D1%80%D1%83%D1%80%D0%B3%D0%B8%D0%B8+%D0%B8+%D0%BA%D0%BE%D1%81%D0%BC%D0%B5%D1%82%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8"><img title="Поделиться в Я.ру" alt="ya.ru" src="http://aesthetic-clinic.ru/application/maxsite/plugins/addzakl/images24/yaru.png" width="24" height="24"></a> <a rel="nofollow" href="http://www.livejournal.com/update.bml?event=http://aesthetic-clinic.ru/page/face&amp;subject=%D0%9F%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BA%D0%B0+%D0%BB%D0%B8%D1%86%D0%B0+-+%D0%9A%D0%BB%D0%B8%D0%BD%D0%B8%D0%BA%D0%B0+%D1%8D%D1%81%D1%82%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B9+%D1%85%D0%B8%D1%80%D1%83%D1%80%D0%B3%D0%B8%D0%B8+%D0%B8+%D0%BA%D0%BE%D1%81%D0%BC%D0%B5%D1%82%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8"><img title="Опубликовать в LiveJournal" alt="livejournal.ru" src="http://aesthetic-clinic.ru/application/maxsite/plugins/addzakl/images24/livejournal.png" width="24" height="24"></a> <a rel="nofollow" href="http://www.google.com/bookmarks/mark?op=edit&amp;bkmk=http://aesthetic-clinic.ru/page/face&amp;title=%D0%9F%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BA%D0%B0+%D0%BB%D0%B8%D1%86%D0%B0+-+%D0%9A%D0%BB%D0%B8%D0%BD%D0%B8%D0%BA%D0%B0+%D1%8D%D1%81%D1%82%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B9+%D1%85%D0%B8%D1%80%D1%83%D1%80%D0%B3%D0%B8%D0%B8+%D0%B8+%D0%BA%D0%BE%D1%81%D0%BC%D0%B5%D1%82%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8"><img title="Сохранить закладку в Google" alt="google.com" src="http://aesthetic-clinic.ru/application/maxsite/plugins/addzakl/images24/google-bookmarks.png" width="24" height="24"></a> <a rel="nofollow" href="http://zakladki.yandex.ru/newlink.xml?url=http://aesthetic-clinic.ru/page/face&amp;name=%D0%9F%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BA%D0%B0+%D0%BB%D0%B8%D1%86%D0%B0+-+%D0%9A%D0%BB%D0%B8%D0%BD%D0%B8%D0%BA%D0%B0+%D1%8D%D1%81%D1%82%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B9+%D1%85%D0%B8%D1%80%D1%83%D1%80%D0%B3%D0%B8%D0%B8+%D0%B8+%D0%BA%D0%BE%D1%81%D0%BC%D0%B5%D1%82%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8"><img title="Добавить в Яндекс.Закладки" alt="yandex.ru" src="http://aesthetic-clinic.ru/application/maxsite/plugins/addzakl/images24/yandex.png" width="24" height="24"></a>
-		<script src="https://apis.google.com/js/plusone.js"></script>
-		<div class="g-plusone" data-size="standard" data-count="true"></div>
-		<script> gapi.plusone.render("g-plusone", {"size": "standard", "count": "true"}); </script>
-		</div>
+<div class="mso-forms"><form method="post" enctype="multipart/form-data"><input type="hidden" value="0c0d78358816271d5d5c7f587f9006ef" name="forms_session"><p><label><span>Ваш email *</span><input name="forms_fields[0]" value="" type="text" placeholder="Ваш email" required></label></p><p><label><span>Ваше имя *</span><input name="forms_fields[1]" value="" type="text" placeholder="Ваше имя" required></label></p><p><label><span>Ваш возраст</span><input name="forms_fields[2]" value="" type="text" placeholder="Ваш возраст"></label></p><p><label><span>Ваш вопрос *</span><textarea name="forms_fields[3]"  required></textarea></label></p><p><label><span>Наберите число 307 *</span><input type="text" name="forms_fields[antispam]" required></label></p><p class="mso-forms-buttons"><button type="submit">Отправить</button> <button type="reset">Очистить форму</button></p></form></div>
+
+</div>
+
 <div class="break"></div></div>
-</div></div><!--div class="page_only"-->
-<span><a id="comments"></a></span>
-</div><!-- class="type type_page" -->
+</div>
+<div class="home-title-col">Новости</div>
+
+<div class="columns"><div class="columns-wrap">
+<div class="left w25 column column-1 column-1-of-4 column-first">
+<div class="column-content"><a href="http://aesthetic-clinic.ru/page/akcija-dostupnoe-uvelichenie-grudi"><img src="http://aesthetic-clinic.ru/uploads/grud-215-150.jpg" class="width100" alt="" title="Акция: Доступное увеличение груди!"></a><h3><a href="http://aesthetic-clinic.ru/page/akcija-dostupnoe-uvelichenie-grudi" title="Акция: Доступное увеличение груди!">Акция: Доступное увеличение груди!</a></h3><p class="info">01/02/2017 02:00</p>
+<div class="page_content">До 28 февраля 2017 года продлевается 20% скидка на имплантаты фирмы Natrelle (Allerghan ) и импланта ...</div></div></div>
+
+<div class="left w25 column column-2 column-2-of-4">
+<div class="column-content"><a href="http://aesthetic-clinic.ru/page/akcija-dostupnaja-plastika-ushej"><img src="http://aesthetic-clinic.ru/uploads/ushi-215-150.jpg" class="width100" alt="" title="Акция: Доступная пластика ушей"></a><h3><a href="http://aesthetic-clinic.ru/page/akcija-dostupnaja-plastika-ushej" title="Акция: Доступная пластика ушей">Акция: Доступная пластика ушей</a></h3><p class="info">01/02/2017 01:00</p>
+<div class="page_content">Только до&nbsp;28 февраля 2017 года действует специальное предложение:
+
+Стоимость коррекции лопоухос ...</div></div></div>
+
+<div class="left w25 column column-3 column-3-of-4">
+<div class="column-content"><a href="http://aesthetic-clinic.ru/page/skidki-na-kosmetologiyu"><img src="http://aesthetic-clinic.ru/uploads/cosmetology-215-150.jpg" class="width100" alt="" title="Cкидки на косметологию"></a><h3><a href="http://aesthetic-clinic.ru/page/skidki-na-kosmetologiyu" title="Cкидки на косметологию">Cкидки на косметологию</a></h3><p class="info">01/02/2017 00:00</p>
+<div class="page_content">С 1 по 28 февраля 2017 года в&nbsp;Клинике эстетической хирургии и&nbsp;косметологии объявляется ски ...</div></div></div>
+
+<div class="left w25 column column-4 column-4-of-4 column-last">
+<div class="column-content"><a href="http://aesthetic-clinic.ru/page/akcija-dostupnaja-intimnaja-plastika-v-sankt-peterburge-spb"><img src="http://aesthetic-clinic.ru/uploads/intim-plastica-215-150.jpg" class="width100" alt="" title="Акция: Доступная интимная пластика!"></a><h3><a href="http://aesthetic-clinic.ru/page/akcija-dostupnaja-intimnaja-plastika-v-sankt-peterburge-spb" title="Акция: Доступная интимная пластика!">Акция: Доступная интимная пластика!</a></h3><p class="info">31/01/2017 23:00</p>
+<div class="page_content">Только до 28 февраля 2017 года действуют следующие скидки на интимную пластику:
+Уменьшение малых по ...</div></div></div>
+<div class="clearfix"></div></div></div><!-- end columns -->
 						</div><!-- div class="content-wrap" -->
 					</div><!-- div class="content" -->
 
-					<div class="aside sidebar sidebar1"><div class="sidebar1-wrap"></div><!-- div class="sidebar1-wrap" --></div><!-- div class="aside sidebar sidebar1" -->
+
 					<div class="clearfix"></div>
 
 				</div><!-- div class="main-wrap" -->
