@@ -148,6 +148,41 @@ div.columns {
   }
 }
 
+.btn-doctor {
+  display: block;
+  background-color: #37484D;
+  text-transform: uppercase;
+  color: #fff;
+  transition: background-color 0.3s 0s ease-out;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 35px;
+  padding: 0 20px;
+  text-align: center;
+
+  &:hover, &:focus {
+    background-color: #2D3F48;
+    color: #CCDBDF;
+    text-decoration: none;
+  }
+
+  & + .search {
+    margin-top: 15px !important;
+  }
+}
+
+// #TB_window {
+//   label {
+//     display: block;
+//
+//     span {
+//       display: block;
+//       text-align: left;
+//       margin-bottom: 4px;
+//     }
+//   }
+// }
+
 .page_content,
 #TB_window {
   @media (max-width: @screen-xs) {
@@ -1170,6 +1205,79 @@ div.ns-descr-search div.r2 {
 
   @media (max-width: @screen-md) {
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 15px !important;
+
+    .btn-doctor {
+      max-width: 300px;
+      width: 220px;
+      flex-grow: 1;
+      // line-height: 27px;
+      margin-bottom: 0;
+      padding-right: 15px;
+    }
+
+    .search {
+      max-width: 300px;
+      width: 220px;
+      flex-grow: 1;
+      margin: 0 !important;
+      padding-left: 15px;
+      display: flex;
+      align-items: center;
+
+      form.fform {
+        width: 100%;
+      }
+    }
+
+    form.fform p {
+      padding: 0 !important;
+    }
+  }
+
+  @media (max-width: @screen-xs) {
+    .btn-doctor {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 15px;
+      padding: 0;
+    }
+
+    .search {
+      width: 100%;
+      max-width: 100%;
+      padding: 0;
+    }
+  }
+}
+
+.header-social {
+  margin-top: 10px;
+  text-align: center;
+
+  &__item {
+    margin-right: 10px;
+  }
+
+  a {
+
+    &:hover, &:focus {
+      text-decoration: none;
+
+      svg {
+        fill: #4C646B;
+      }
+    }
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+    fill: #37484D;
+    transition: all 0.3s 0s ease-out;
   }
 }
 
@@ -1467,7 +1575,7 @@ div.caterory-all-pages a {
 
 .ns-descr-search .r1-5 {
   float: left;
-  padding-top: 1.5em;
+  // padding-top: 10px;
 }
 
 #to_top {
