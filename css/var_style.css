@@ -76,6 +76,27 @@ div.all {
   box-shadow: 0 0 20px #000;
   background-color: white;
 }
+.btn-doctor {
+  display: block;
+  background-color: #37484D;
+  text-transform: uppercase;
+  color: #fff;
+  transition: background-color 0.3s 0s ease-out;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 35px;
+  padding: 0 20px;
+  text-align: center;
+}
+.btn-doctor:hover,
+.btn-doctor:focus {
+  background-color: #2D3F48;
+  color: #CCDBDF;
+  text-decoration: none;
+}
+.btn-doctor + .search {
+  margin-top: 15px !important;
+}
 div.all-wrap {
   border: 5px solid #92AFB6;
   padding: 25px;
@@ -696,6 +717,27 @@ div.ns-descr-search div.r2 {
   float: right;
   width: auto;
 }
+.header-social {
+  margin-top: 10px;
+  text-align: center;
+}
+.header-social__item {
+  margin-right: 10px;
+}
+.header-social a:hover,
+.header-social a:focus {
+  text-decoration: none;
+}
+.header-social a:hover svg,
+.header-social a:focus svg {
+  fill: #4C646B;
+}
+.header-social svg {
+  width: 24px;
+  height: 24px;
+  fill: #37484D;
+  transition: all 0.3s 0s ease-out;
+}
 div.ns-descr-search div.r2 div.search {
   margin: 30px 0 0 0;
 }
@@ -925,7 +967,6 @@ div.caterory-all-pages a {
 }
 .ns-descr-search .r1-5 {
   float: left;
-  padding-top: 1.5em;
 }
 @media (min-width: 992px) {
   .js div.MainMenu .wrap {
@@ -1059,6 +1100,39 @@ div.caterory-all-pages a {
   }
   div.ns-descr-search div.r2 {
     width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 15px !important;
+  }
+  div.ns-descr-search div.r2 .btn-doctor {
+    max-width: 300px;
+    width: 220px;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    margin-bottom: 0;
+    padding-right: 15px;
+  }
+  div.ns-descr-search div.r2 .search {
+    max-width: 300px;
+    width: 220px;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    margin: 0 !important;
+    padding-left: 15px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  div.ns-descr-search div.r2 .search form.fform {
+    width: 100%;
+  }
+  div.ns-descr-search div.r2 form.fform p {
+    padding: 0 !important;
   }
   .iosSlider {
     display: none !important;
@@ -1085,6 +1159,17 @@ div.caterory-all-pages a {
   #TB_window th {
     display: block;
     width: 100%;
+  }
+  div.ns-descr-search div.r2 .btn-doctor {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 15px;
+    padding: 0;
+  }
+  div.ns-descr-search div.r2 .search {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
   }
 }
 @media (max-width: 767px) {
