@@ -523,15 +523,15 @@ div.MainMenu ul.menu>li>a {
   }
 }
 
-div.MainMenu ul.menu li.group>a span {
+div.MainMenu ul.menu li.group > a span {
   background: url("../images/current/menu-down-light.png") no-repeat right center;
 
   @media (max-width: @screen-md) {
-    display: none;
+    background-image: none;
   }
 }
 
-div.MainMenu li.icon-submenu>a>span {
+div.MainMenu li.icon-submenu > a > span {
   background: url("../images/current/bullet03.png") no-repeat right center !important;
 
   @media (max-width: @screen-md) {
@@ -607,10 +607,10 @@ body.body-all div.MainMenu {
 div.MainMenu {
 
   .js & .wrap {
-    overflow: hidden;
 
     @media (max-width: @screen-md) {
       display: none;
+      overflow: hidden;
     }
 
     @media (min-width: (@screen-md + 1)) {
